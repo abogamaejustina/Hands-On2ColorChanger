@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Color</title>
+    <style>
+         #changeColorBtn {
+            padding: 15px 30px;
+            font-size: 20px;
+            cursor: pointer;
+            background-color: palevioletred;
+            color: purple;
+            border: rebeccapurple;
+            border-radius: 15px;
+        }
+        body {
+            background-image: url(tulips.jpeg);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        p{
+            padding-top: 10px;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 25px;
+            text-align: center;
+            text-transform: uppercase;
+            color: blueviolet;
+        }
+        h1 {
+            text-align: center;
+            text-transform: unset;
+            color: purple;
+          }
+        #colorBox {
+            width: 250px;
+            height: 250px;
+            background-color: green;
+            border-radius: 15px;
+            margin: 20px;
+        }
+        button{
+            width: 150px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>JavaScript Color Changer()Hands-On</h1>
+    <p> What are you waiting po? <br>Click me na</br></p>
+
+    <button id="changeColorBtn">Hi!! <br>Click Me</br></button>
+    <div id="colorBox"></div>
+
+    <script>
+        const changeColorBtn = document.getElementById('changeColorBtn');
+        const colorBox = document.getElementById('colorBox');
+
+        changeColorBtn.addEventListener('click', function() {
+            if (colorBox.style.backgroundColor === 'green') {
+                colorBox.style.backgroundColor = 'blue';
+            } else {
+                colorBox.style.backgroundColor = 'green';
+            }
+        });
+    </script>
+
+</body>
+</html>
